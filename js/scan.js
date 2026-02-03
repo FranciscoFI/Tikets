@@ -5,7 +5,7 @@ function start() {
 
   scanner.start(
     { facingMode: "environment" },
-    { fps: 10, qrbox: 500 },
+    { fps: 10, qrbox: 800 },
     code => {
       const db = loadDB();
       const ticket = db.tickets.find(t => t.id === code);
@@ -23,4 +23,5 @@ function start() {
 function status(msg) {
   document.getElementById("status").innerText = msg;
 }
+
 
